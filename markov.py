@@ -1,5 +1,5 @@
 import random
-
+import numpy as np
 """ 
 This is a gamblers dilemma problem
 we have 10 pounds, and we toss a coin, each time we toss head we gain 1 pound, else we loose 1 pound
@@ -19,4 +19,6 @@ def get_count_before_run_out_of_money():
 
 sims = [get_count_before_run_out_of_money() for _ in range(100)]
 
+print(np.mean(sims))
+print(np.percentile(sims, np.arange(0, 100, 10)))
 print(sims)
